@@ -12,6 +12,10 @@ npm uninstall hexo-livereload --save
 npm install hexo-browsersync --save
 ```
 
+2. Error: Cannot find module './build/Release/DTraceProviderBindings']...
+
+参看: https://hexo.io/docs/troubleshooting.html#Error-with-DTrace-Mac-OS-X
+
 ## 发布流程
 
 #### clone项目

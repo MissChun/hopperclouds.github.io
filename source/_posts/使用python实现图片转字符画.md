@@ -13,7 +13,7 @@ author: Kxrr
 
 可能不少人都见过这张图……
 
-![](http://img.my.csdn.net/uploads/201211/03/1351953208_3499.gif)
+![](https://media.giphy.com/media/DyK2Fy4Mcs6cw/giphy.gif)
 
 这是一张多帧合成的gif图片, 每帧图片由ascii字符组成。
 
@@ -49,13 +49,9 @@ CHARS_N = len(CHARS)
 
 常见的公式是:
 
-$$
-\begin{aligned}
+```
 Gray = 0.30 * R + 0.59 * G + 0.11 * B
-\end{aligned}
-$$
-
-
+```
 
 不同的人眼对RGB颜色的感知并不相同，所以转换时候给予不同的权重。
 这个原理也普遍应用于计算机图像处理系统。
