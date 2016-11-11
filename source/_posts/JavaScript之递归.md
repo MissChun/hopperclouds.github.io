@@ -28,9 +28,20 @@ tags:
 ```
 上面的的这个函数表面上没有什么问题，但是以下的代码却可能会导致问题：
 ```javascript
-    var f = test;
-    test = null;
-    console.log(f(2));//报错 Uncaught TypeError: test is not a function
+    function Car(model, year, names) {
+        this.model = model;
+        this.year = year;
+        this.names = names;
+        this.output= function () {
+            return this.model + "喜欢" + this.names;
+        };
+    }
+
+    var tom= new Car("大叔", 30, '萝莉');
+    var dudu= new Car("欧巴", 24, '御姐');
+
+    console.log(tom.output());
+    console.log(dudu.output());
 ```
 指向原始函数的引用就剩下一个，当调用f()函数时，而test已经不再是一个函数了，所以会导致错误，但是我们可以使用arguments.callee来解决这个问题。
 
